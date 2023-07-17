@@ -1,0 +1,122 @@
+/* 상단 todolist 입력 form */
+#new-task-form {
+  display: flex;
+}
+
+/* 상단 todolist 입력칸 */
+#new-task-input {
+  flex: 1 1 0%; /* 크기가 유동적으로 변함 */
+  background-color: var(--darker);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  color: var(--light);
+  font-size: 1.25rem;
+}
+
+/* 상단 todolist 입력칸의 placeholder */
+#new-task-input::placeholder {
+  color: var(--gray);
+}
+
+/* 상단 todolist form의 추가 버튼 */
+#new-task-submit {
+  font-size: 1.25rem;
+  font-weight: 700;
+  background-image: linear-gradient(
+    to right,
+    var(--pink),
+    var(--purple)
+  ); /* 그라데이션 색 */
+  background-clip: text; /* 그라데이션을 text에 넣을 것 */
+  -webkit-background-clip: text; /* 크롬에 적용 */
+  -webkit-text-fill-color: transparent; /* 없으면 그라데이션이 넣어지지 않는다. */
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+/* 상단 todolist form의 추가 버튼 hover효과 */
+#new-task-submit:hover {
+  opacity: 0.8;
+}
+
+/* 상단 todolist form의 추가 버튼 클릭 효과 */
+#new-task-submit:active {
+  opacity: 0.6;
+}
+
+/* todolist 목록이 채워질 section */
+.task-list {
+  padding: 1rem;
+}
+
+.task-list h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--gray);
+  margin-bottom: 1rem;
+}
+
+#tasks .task {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--darkest);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+#tasks .task .content {
+  flex: 1 1 0%;
+}
+
+#tasks .task .content .text {
+  color: var(--light);
+  font-size: 1.125rem;
+  width: 100%;
+  display: block;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+/* readonly 속성이 없을 때(수정상태일 때와 아닌 경우 구분) */
+#tasks .task .content .text:not(:read-only) {
+  color: var(--pink);
+}
+
+#tasks .task .actions {
+  display: flex;
+  margin: 0 -0.5rem;
+}
+
+.task .actions button {
+  cursor: pointer;
+  margin: 0 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+
+.task .actions button:hover {
+  opacity: 0.8;
+}
+
+.task .actions button:active {
+  opacity: 0.6;
+}
+
+.task .actions .edit {
+  background-image: linear-gradient(
+    to right,
+    var(--pink),
+    var(--purple)
+  ); /* 그라데이션 색 */
+  background-clip: text; /* 그라데이션을 text에 넣을 것 */
+  -webkit-background-clip: text; /* 크롬에 적용 */
+  -webkit-text-fill-color: transparent; /* 없으면 그라데이션이 넣어지지 않는다. */
+}
+
+.task .actions .delete {
+  color: crimson;
+}

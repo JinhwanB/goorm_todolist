@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList 2023</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/greeting.css">
+</head>
+
+<body>
+    <div class="greetings">
+        <h1 id="greeting-text">Hello!</h1>
+        <form class="set-name">
+            <input type="text" id="greeting-input" placeholder="당신의 이름은 무엇입니까?" autocomplete="off">
+            <input type="submit" id="greeting-submit" value="Confirm">
+        </form>
+    </div>
+    <h1 class="hidden" id="greeting-name">Hello!</h1>
+    <header class="hidden">
+        <h1>ToDoList 2023</h1>
+        <form id="new-task-form">
+            <input type="text" id="new-task-input" placeholder="오늘의 계획은?" autocomplete="off">
+            <input type="submit" id="new-task-submit" value="Add">
+        </form>
+    </header>
+
+    <main class="hidden">
+        <section class="task-list">
+            <h2>Tasks</h2>
+            <div id="tasks">
+                <!-- <div class="task">
+                    <div class="content">
+                        <input type="text" class="text" value="My shiny task" autocomplete="off" readonly>
+                    </div>
+                    <div class="actions">
+                        <button class="edit">수정</button>
+                        <button class="delete">삭제</button>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/greeting.js"></script>
+</body>
+
+</html>

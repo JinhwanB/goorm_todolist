@@ -1,0 +1,53 @@
+.greetings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#greeting-input {
+  background-color: var(--darker);
+  padding: 1rem;
+  border-radius: 1rem;
+  color: var(--light);
+  font-size: 1.25rem;
+  width: 20rem;
+  margin-top: 4rem;
+  margin-right: 1rem;
+  text-align: center;
+}
+
+#greeting-input::placeholder {
+  color: var(--gray);
+}
+
+#greeting-submit {
+  font-size: 1.25rem;
+  font-weight: 700;
+  background-image: linear-gradient(
+    to right,
+    var(--pink),
+    var(--purple)
+  ); /* 그라데이션 색 */
+  background-clip: text; /* 그라데이션을 text에 넣을 것 */
+  -webkit-background-clip: text; /* 크롬에 적용 */
+  -webkit-text-fill-color: transparent; /* 없으면 그라데이션이 넣어지지 않는다. */
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#greeting-submit:hover {
+  opacity: 0.8;
+}
+
+#greeting-submit:active {
+  opacity: 0.6;
+}
+
+#greeting-name {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}

@@ -1,0 +1,104 @@
+:root {
+  /* 색상을 변수로 넣고 사용 ( ex. var(변수) ) */
+  --dark: #374151;
+  --darker: #1f2937;
+  --darkest: #111827;
+  --gray: #6b7280;
+  --light: #eee;
+  --pink: #ec4899;
+  --purple: #8b5cf6;
+}
+
+* {
+  /* 전체에 적용 */
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Fira sans", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--dark);
+  color: #fff;
+}
+
+header {
+  /* 절대값이 아닌 상대값을 사용하여 반응형으로 만듬 */
+  padding: 2rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto; /* 가운데 위치 */
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--gray);
+  margin-bottom: 1rem;
+}
+
+input,
+button {
+  appearance: none; /* 원래 쓰이는 속성을 없앱니다. */
+  border: none;
+  outline: none;
+  background: none;
+}
+
+main {
+  flex: 1 1 0%;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.appear-first {
+  animation: fade-in-first 1s;
+  animation-fill-mode: forwards;
+}
+
+.appear-second {
+  animation: fade-in-second 5s;
+  animation-fill-mode: forwards;
+}
+
+.disappear {
+  animation: fade-out 1s;
+  animation-fill-mode: forwards;
+  display: none;
+}
+
+@keyframes fade-in-first {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-second {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
